@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
   providers:[AccountsService]
 })
 export class AppComponent implements OnInit{
+
   accounts:{name:string,status:string}[];
 
   constructor(private acctService:AccountsService) {
       
   }
+  
   ngOnInit(): void {
     this.accounts = this.acctService.accounts;
   }
-  
 }
